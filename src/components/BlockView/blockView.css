@@ -1,0 +1,31 @@
+.block-view-container{
+    height: calc(100vh);
+    overflow-y: hidden;
+    margin-top: 23px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.block{
+    height: 500px;
+    width: 300px;
+    background: white;
+}
+
+@media (max-width: 600px) {
+
+    .block-view-container{
+        height: calc(100vh);
+        margin-top: 23px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+    }
+
+    .block {
+        width: 100vw;
+    }
+}

@@ -1,12 +1,30 @@
-import React from 'react';
+import React, {Suspense} from 'react';
 import ReactDOM from 'react-dom';
+import {Router} from 'react-router-dom';
+import {ConnectedRouter} from 'connected-react-router';
+import {Provider} from 'react-redux';
+
 import './index.css';
-import App from './App';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import App from './routes';
 import * as serviceWorker from './serviceWorker';
+import configureStore, {history} from './store/configureStore';
+import {Spinner} from "react-bootstrap";
+const store = configureStore();
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+      <Suspense
+          fallback={<Spinner/>}
+      >
+          <Provider store={store}>
+              <ConnectedRouter history={history}>
+                  <Router history={history}>
+                              <App/>
+                  </Router>
+              </ConnectedRouter>
+          </Provider>
+      </Suspense>,
   </React.StrictMode>,
   document.getElementById('root')
 );
