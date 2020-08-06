@@ -5,7 +5,7 @@ import './main.css'
 
 const Main = () => {
     return (
-        <div className="d-flex align-items-center w-100" style={{
+        <div className="d-flex align-items-center w-100 problem-container" style={{
             justifyContent: 'space-evenly'
         }}>
             <Card style={{ width: '18rem' }}>
