@@ -18,11 +18,11 @@
 
     .block-view-container{
         height: calc(100vh);
-        margin-top: 23px;
         width: 100%;
         display: flex;
         justify-content: center;
-        align-items: start;
+        align-items: center;
+        vertical-align: middle;
     }
 
     .block {
