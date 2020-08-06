@@ -35,7 +35,7 @@ const FizzBuzz = () => {
     return (
         <div className={'problem-container container-fluid'}>
             <div className="d-flex p-3 bg-secondary text-white flex-wrap">
-                {numbersArray?.map((item, itemIndex) => (<div className="p-5 flex-fill">{handleFizzBuzz(item)}</div>))}
+                {numbersArray?.map((item, itemIndex) => (<div className="p-5 flex-fill" key={itemIndex}>{handleFizzBuzz(item)}</div>))}
             </div>
 
         </div>
