@@ -30,7 +30,9 @@ const Main = () => {
                     <Card.Text>
                        Media Query
                     </Card.Text>
-                    <Button variant="primary">Visit</Button>
+                    <Link to={'/problem2'}>
+                        <Button variant="primary">Visit</Button>
+                    </Link>
                 </Card.Body>
             </Card>
             <Card style={{ width: '18rem' }}>
@@ -40,7 +42,9 @@ const Main = () => {
                     <Card.Text>
                         String Manipulation
                     </Card.Text>
-                    <Button variant="primary">Visit</Button>
+                    <Link to={'/problem3'}>
+                        <Button variant="primary">Visit</Button>
+                    </Link>
                 </Card.Body>
             </Card>
         </div>
